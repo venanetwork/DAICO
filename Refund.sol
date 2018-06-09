@@ -1,6 +1,6 @@
 pragma solidity ^0.4.23;
 
-import './GEBToken.sol';
+import './VENAToken.sol';
 import './PublicRaising.sol';
 import './DateTime.sol';
 import './Fund.sol';
@@ -25,11 +25,11 @@ contract Refund is AccessControl, DateTime {
     uint public constant MIN_VALID_VOTES = 100 * 10 ** uint256(decimals);
     
     PublicRaising public raise;
-    GEBToken public token;
+    VENAToken public token;
     Fund public fund;
     Vote public voteContract;
     
-    constructor (PublicRaising _raise, GEBToken _token, Fund _fund, Vote _vote) public {
+    constructor (PublicRaising _raise, VENAToken _token, Fund _fund, Vote _vote) public {
         raise = _raise;
         token = _token;
         fund = _fund;

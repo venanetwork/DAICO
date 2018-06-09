@@ -2,7 +2,7 @@ pragma solidity ^0.4.23;
 import './AccessControl.sol';
 import './DateTime.sol';
 import './PublicRaising.sol';
-import './GEBToken.sol';
+import './VENAToken.sol';
 import './Vote.sol';
 
 contract Fund is AccessControl, DateTime {
@@ -16,12 +16,12 @@ contract Fund is AccessControl, DateTime {
     uint public withdrawalTime;
     bool public isContinue = true;
     
-    GEBToken public token;
+    VENAToken public token;
     PublicRaising public raise;
     Vote public voteContract;
     address public refund;
     
-    constructor(GEBToken _token, PublicRaising _raise, Vote _vote) public {
+    constructor(VENAToken _token, PublicRaising _raise, Vote _vote) public {
         token = _token;
         raise = _raise;
         voteContract = _vote;

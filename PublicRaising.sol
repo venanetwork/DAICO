@@ -2,7 +2,7 @@ pragma solidity ^0.4.23;
 
 import './AccessControl.sol';
 import './SafeMath.sol';
-import './GEBToken.sol';
+import './VENAToken.sol';
 
 contract PublicRaising is AccessControl {
     uint public constant decimals = 18;
@@ -22,11 +22,11 @@ contract PublicRaising is AccessControl {
     
     bool public inRaising;
     
-    GEBToken public token;
+    V public token;
     address public fund;
     address public refund;
     
-    constructor(GEBToken _token) public {
+    constructor(VENAToken _token) public {
         token = _token;
     }
     
