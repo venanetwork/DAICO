@@ -22,7 +22,7 @@ contract PublicRaising is AccessControl {
     
     bool public inRaising;
     
-    V public token;
+    VENAToken public token;
     address public fund;
     address public refund;
     
