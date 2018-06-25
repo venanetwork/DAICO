@@ -60,7 +60,7 @@ contract Vote {
     
     function voteStop() public returns(bool) {
         require(totalVotesByAddress[msg.sender].inVoting);
-        // require(now > totalVotesByAddress[msg.sender].endTime && totalVotesByAddress[msg.sender].inVoting);
+        require(now > totalVotesByAddress[msg.sender].endTime && totalVotesByAddress[msg.sender].inVoting);
         bool result;
         if (SafeMath.safeAdd(totalVotesByAddress[msg.sender].agreeCount, totalVotesByAddress[msg.sender].disagreeCount) 
             < totalVotesByAddress[msg.sender].minValidWeight) {
